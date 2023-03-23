@@ -44,7 +44,7 @@ const Creact = () => {
     </ColorButton>
   </Box>
 );
-  )
-}
+  
+    }
 
 export default Creact

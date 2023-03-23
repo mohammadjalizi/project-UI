@@ -1,27 +1,33 @@
-import React from 'react'
-
-const Appbar = () => {
+import React from "react";
+import { Toolbar, AppBar, Avatar, Link, Typography } from "@mui/material";
+import img from '../MUI-components/photo.jpg'
+const Appbar = ({ drawerWidth }) => {
   return (
-<Box sx={{ flexGrow: 1 }}>
-      <Appbar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </Appbar>
-    </Box>
-  )
-}
+    <AppBar
+      sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
+      position="static"
+    >
+      <Toolbar>
+        <Link
+          sx={{
+            flexGrow: 1,
+            textDecoration: "none",
+            "&:hover": { fontSize: "16.5px" },
+          }}
+          color="inherit"
+          href="/"
+        >
+          My expenses
+        </Link>
 
-export default Appbar
+        <Typography mr={2} variant="body1" color="inherit">
+       mohammadjalizi
+        </Typography>
+
+        <Avatar alt="Remy Sharp" src={img} />
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Appbar;
