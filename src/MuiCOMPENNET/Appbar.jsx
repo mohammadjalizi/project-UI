@@ -3,7 +3,7 @@ import React from 'react'
 const Appbar = () => {
   return (
 <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <Appbar position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -19,7 +19,7 @@ const Appbar = () => {
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
-      </AppBar>
+      </Appbar>
     </Box>
   )
 }

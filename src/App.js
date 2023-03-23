@@ -1,17 +1,20 @@
 
-import Home from "pages/home/Home";
 import Root from "./pages/Root";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { Create } from "@mui/icons-material";
+import Home from "./pages/Home/Home";
+import Creact from "./pages/Creact/Creact";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <router path="/" element={<Root />}>
       <Route index element={<Home />} />
-      <Route path="create" element={<Create />} />
+      <Route path="create" element={<Creact />} />
 
       {/* ... etc. */}
     </router>
@@ -19,9 +22,9 @@ const router = createBrowserRouter(
 );
 function App() {
   return (
-    <div >
+   
          <RouterProvider router={router} /> 
-    </div>
+ 
   );
 }
 
